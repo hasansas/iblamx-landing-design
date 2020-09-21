@@ -8,76 +8,24 @@ html {
 }
 
 body {
-  /* font-family: 'Ubuntu', sans-serif; */
+  background-color: white;
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
   line-height: 1.65;
-  @apply text-body;
+  color: #333;
 }
 
 p {
   margin-bottom: 1.15rem;
 }
 
-/* $mdc-typography-styles-headline1: (
-  font-family: unquote("Nunito"),
-  font-size: 102
-);
-$mdc-typography-styles-headline2: (
-  font-family: unquote("Nunito"),
-  font-size: 64
-);
-$mdc-typography-styles-headline3: (
-  font-family: unquote("Nunito"),
-  font-size: 51
-);
-$mdc-typography-styles-headline4: (
-  font-family: unquote("Nunito"),
-  font-size: 36
-);
-$mdc-typography-styles-headline5: (
-  font-family: unquote("Nunito"),
-  font-size: 25
-);
-$mdc-typography-styles-headline6: (
-  font-family: unquote("Nunito"),
-  font-size: 21
-);
-$mdc-typography-styles-body1: (
-  font-family: unquote("Nunito"),
-  font-size: 17
-);
-$mdc-typography-styles-body2: (
-  font-family: unquote("Nunito"),
-  font-size: 15
-);
-$mdc-typography-styles-subtitle1: (
-  font-family: unquote("Nunito"),
-  font-size: 17
-);
-$mdc-typography-styles-subtitle2: (
-  font-family: unquote("Nunito"),
-  font-size: 15
-);
-$mdc-typography-styles-button: (
-  font-family: unquote("Nunito"),
-  font-size: 15
-);
-$mdc-typography-styles-overline: (
-  font-family: unquote("Nunito"),
-  font-size: 11
-);
-$mdc-typography-styles-caption: (
-  font-family: unquote("Nunito"),
-  font-size: 13
-); */
-/* 
 h1,
 h2,
 h3,
 h4,
 h5 {
   margin: 2.75rem 0 1.05rem;
+  font-family: 'Nunito', sans-serif;
   font-weight: 400;
   line-height: 1.15;
 }
@@ -101,12 +49,12 @@ h4 {
 
 h5 {
   font-size: 1.25em;
-} */
+}
 
-/* small,
+small,
 .text_small {
   font-size: 0.8em;
-} */
+}
 
 
 /*------------------------------------------*/
@@ -173,6 +121,16 @@ section .main-title .title {
 
 
 /*------------------------------------------*/
+/*	   	Container
+/*------------------------------------------*/
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1250px;
+  }
+}
+
+
+/*------------------------------------------*/
 /*	   	Navbar
 /*------------------------------------------*/
 .navbar {
@@ -209,12 +167,21 @@ section .main-title .title {
   display: block;
 }
 
-
 .navbar-brand span {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
   color: #fff !important;
+}
+
+.navbar .navbar-toggler {
+  color: #fff;
+  border-color: #fff;
+}
+
+.navbar.bg-light .navbar-toggler {
+  color: rgba(0, 0, 0, .5);
+  border-color: rgba(0, 0, 0, .1);
 }
 
 .nav-item.bordered {
@@ -300,6 +267,7 @@ section .main-title .title {
 
 .hero .item .item-content .container .content-container {
   margin: 0;
+  padding: 0 16px;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -392,10 +360,6 @@ section.features .features-icons img {
 /*------------------------------------------*/
 .courses .card {
   margin-bottom: 32px;
-}
-
-.courses .card-title {
-  font-size: 18px;
 }
 
 .courses .card-footer [class*="icon-"] {
@@ -818,7 +782,8 @@ figure.effect-oscar figcaption::before {
 }
 
 figure.effect-oscar .title {
-  font-size: 20px;
+  margin: 0;
+  line-height: 1;
   font-weight: 600;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   -webkit-transition: -webkit-transform 0.35s;
@@ -829,6 +794,7 @@ figure.effect-oscar .title {
 
 figure.effect-oscar figcaption::before,
 figure.effect-oscar p {
+  margin: 0;
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
